@@ -1,0 +1,111 @@
+.container {
+  max-width: 80vw;
+  margin: 0 auto;
+}
+
+.alink {
+  color: $text-color;
+}
+
+.btn {
+  &--orange {
+    position: relative;
+    background-color: rgb(255, 206, 83);
+    display: flex;
+    max-width: 20rem;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem;
+    border-radius: 20px;
+    color: black;
+    font-weight: 500;
+    overflow: hidden;
+    span,
+    .btn-arrow {
+      z-index: 9999;
+    }
+    .btn-arrow {
+      max-width: 3rem;
+      justify-self: flex-end;
+      stroke: white;
+      background-color: rgb(254, 127, 50);
+      border-radius: 20px;
+      transition: 0.3s all ease-in;
+    }
+
+    &::before {
+      position: absolute;
+      width: 100%;
+      content: "";
+      height: 100%;
+      top: 0;
+      left: 0;
+      background-color: rgb(243, 182, 30);
+      transition: 0.3s all ease-in;
+      transform: translateY(100%);
+    }
+
+    &:hover {
+      cursor: pointer;
+      &::before {
+        transform: translateY(0);
+      }
+      .btn-arrow {
+        transform: scale(1.1);
+      }
+    }
+  }
+}
+
+.res-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+}
+
+//margins
+
+.mg-bot-sm {
+  margin-bottom: 2rem;
+}
+.mg-bot-md {
+  margin-bottom: 4rem;
+}
+.mg-bot-bg {
+  margin-bottom: 8rem;
+}
+
+//h1,h2,h3
+.title {
+  font-size: 7rem;
+  font-weight: 700;
+  line-height: 1;
+}
+
+.section-title {
+  font-size: 4.5rem;
+  font-weight: 700;
+  line-height: 1;
+}
+
+.important-text {
+  font-size: 2rem;
+  font-weight: 500;
+  display: block;
+}
+
+.smaller-text {
+  font-size: 1.3rem;
+}
+
+.white-text {
+  color: $text-color-white;
+  font-weight: 600;
+}
+
+.text-align-center {
+  text-align: center;
+}
+
+.bold-text {
+  font-weight: 600;
+}
